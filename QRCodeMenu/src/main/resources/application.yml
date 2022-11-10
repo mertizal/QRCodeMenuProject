@@ -1,0 +1,31 @@
+spring:
+
+  security:
+      user:
+        name: user
+        password: user
+
+
+  devtools:
+    livereload:
+      enabled: true
+      port: 35729
+
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://localhost:5432/auth_db
+    username: root
+    password: root
+
+  mvc:
+    path match:
+      matching-strategy: ant_path_matcher
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+server:
+
+  error:
+    include-message: always
